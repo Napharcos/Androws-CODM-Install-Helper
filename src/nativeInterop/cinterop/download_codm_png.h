@@ -1,0 +1,2 @@
+extern const unsigned char _binary_src_nativeMain_resources_download_codm_png_start[];
+extern const unsigned char _binary_src_nativeMain_resources_download_codm_png_end[];

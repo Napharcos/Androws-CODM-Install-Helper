@@ -1,0 +1,16 @@
+Copyright 2025 Napharcos. All rights reserved.
+
+Permission is granted to use this software for personal, non-commercial purposes only.
+Any form of copying, distribution, modification, reverse engineering, or creation of derivative works is **strictly prohibited** without the express written consent of the author, unless otherwise explicitly stated.
+
+The source code is made publicly available for transparency and to promote trust, not for reuse or redistribution.
+Viewing or running the source code does not imply permission to reuse or incorporate it elsewhere.
+
+For any commercial, educational, or redistributive use, please contact the author directly for explicit permission.
+
+
+This software and its components are provided "as is", without any warranties, express or implied, including but not limited to merchantability or fitness for a particular purpose.
+Use at your own risk.
+
+This software is not affiliated with, endorsed by, or supported by the original software developers or publishers, including but not limited to Tencent, Activision, or their affiliates.
+Any use of associated configurations or automations is done at your own discretion. The author assumes no responsibility for any resulting issues or damages.

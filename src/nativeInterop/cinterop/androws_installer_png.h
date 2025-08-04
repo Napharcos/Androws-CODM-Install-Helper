@@ -1,0 +1,2 @@
+extern const unsigned char _binary_src_nativeMain_resources_androws_installer_png_start[];
+extern const unsigned char _binary_src_nativeMain_resources_androws_installer_png_end[];

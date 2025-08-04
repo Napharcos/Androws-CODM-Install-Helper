@@ -1,0 +1,2 @@
+headers = sqlite_wrapper.h
+linkerOpts = src/nativeMain/resources/sqlite_wrapper.o

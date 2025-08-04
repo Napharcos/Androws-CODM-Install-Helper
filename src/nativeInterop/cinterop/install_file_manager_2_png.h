@@ -1,0 +1,2 @@
+extern const unsigned char _binary_src_nativeMain_resources_install_file_manager_2_png_start[];
+extern const unsigned char _binary_src_nativeMain_resources_install_file_manager_2_png_end[];

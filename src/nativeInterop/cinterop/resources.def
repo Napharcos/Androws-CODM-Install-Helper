@@ -1,0 +1,2 @@
+headers = androws_installer_png.h codm_ico.h download_codm_png.h install_file_manager_1_png.h install_file_manager_2_png.h install_file_manager_3_png.h website_png.h
+linkerOpts = src/nativeMain/resources/androws_installer_png.o src/nativeMain/resources/codm_ico.o src/nativeMain/resources/download_codm_png.o src/nativeMain/resources/install_file_manager_1_png.o src/nativeMain/resources/install_file_manager_2_png.o src/nativeMain/resources/install_file_manager_3_png.o src/nativeMain/resources/website_png.o

@@ -1,0 +1,2 @@
+headers = kernel.h
+linkerOpts = src/nativeMain/resources/kernel.o -lole32 -lkernel32
