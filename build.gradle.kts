@@ -38,7 +38,7 @@ kotlin {
         binaries {
             executable {
                 entryPoint = "main"
-                linkerOpts("-static", "-Wl,-subsystem,windows")
+                linkerOpts("-static", "-Wl,-subsystem,windows", "-static-libstdc++")
             }
         }
     }
