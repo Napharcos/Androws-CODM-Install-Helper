@@ -1,7 +1,6 @@
 @file:OptIn(ExperimentalForeignApi::class)
 
 import kotlinx.cinterop.ExperimentalForeignApi
-import platform.windows.CONSOLE_FULLSCREEN
 import platform.windows.EnableWindow
 import platform.windows.FALSE
 import platform.windows.HWND
@@ -69,7 +68,8 @@ val brKeys = mutableListOf(
     KeyData(kKey, mp_l_key, loadBrKey(kKey) ?: "K", loadBrKeyCode(kKey) ?: 75, 3024),
     KeyData(key3, br_3_key, loadBrKey(key3) ?: "3", loadBrKeyCode(key3) ?: 51, 3025),
     KeyData(key4, br_4_key, loadBrKey(key4) ?: "4", loadBrKeyCode(key4) ?: 52, 3026),
-    KeyData(lockMouseKey, lock_mouse_key, loadBrKey(lockMouseKey) ?: "X", loadBrKeyCode(lockMouseKey) ?: 88, 3027),
+    KeyData(nKey, br_n_key, loadBrKey(nKey) ?: "N", loadBrKeyCode(nKey) ?: 78, 3027),
+    KeyData(lockMouseKey, lock_mouse_key, loadBrKey(lockMouseKey) ?: "X", loadBrKeyCode(lockMouseKey) ?: 88, 3028),
 )
 
 val gundamKeys = mutableListOf(
@@ -128,7 +128,7 @@ fun updateKeyCode(id: String, keyCode: Int) {
         reg?.let { setValue(it, mode + id + code, keyCode.toString()) }
     }
 
-    updateSubmitButtonState(nextButton, keyMaps[selectedKeymap]?.keys ?: emptyList())
+    updateSubmitButtonState(nextButton)
 }
 
 fun updateKey(id: String, key: String) {
@@ -162,8 +162,14 @@ fun removeKey(keyCode: Int) {
     }
 }
 
-fun updateSubmitButtonState(button: HWND?, keys: List<KeyData>) {
-    val enabled = keys.all { it.currentCode >= 0 }
+fun updateSubmitButtonState(button: HWND?) {
+    var enabled = true
+
+    for ((_, v) in keyMaps) {
+        if (enabled == false) break
+        enabled = v.keys.all { it.currentCode >= 0 }
+    }
+
     EnableWindow(button, if (enabled) TRUE else FALSE)
 }
 
@@ -219,6 +225,7 @@ const val iKey = "iKey"
 const val lKey = "lKey"
 const val kKey = "kKey"
 const val bKey = "bKey"
+const val nKey = "nKey"
 const val altKey = "altKey"
 const val lockMouseKey = "lockMouseKey"
 const val capsKey = "capsKey"

@@ -38,6 +38,21 @@ val codmIco = getImageBinary(
     _binary_src_nativeMain_resources_codm_ico_end
 )
 
+val help1 = getImageBinary(
+    _binary___help_1_png_start,
+    _binary___help_1_png_end
+)
+
+val help2 = getImageBinary(
+    _binary___help_2_png_start,
+    _binary___help_2_png_end
+)
+
+val help3 = getImageBinary(
+    _binary___help_3_png_start,
+    _binary___help_3_png_end
+)
+
 private fun getImageBinary(start: CPointer<UByteVarOf<UByte>>, end: CPointer<UByteVarOf<UByte>>): ByteArray {
     val s = start.rawValue.toLong()
     val end = end.rawValue.toLong()

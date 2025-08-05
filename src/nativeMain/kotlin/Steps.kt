@@ -47,7 +47,7 @@ enum class Steps(
     ),
 
     CODM_KEYMAP(
-        elements = listOf(vSeparator, separator, container, backButton, nextButton, cancelButton),
+        elements = listOf(vSeparator, separator, container, helpButton, backButton, nextButton, cancelButton),
         clicked = { keymapPageCommand(it) }
     )
 }

@@ -388,6 +388,13 @@ fun updateScrollSize() {
 @OptIn(ExperimentalForeignApi::class)
 fun keymapPageCommand(id: Int): Int {
     return when (id) {
+        HELP_BUTTON_ID -> {
+            openImage(help1)
+            openImage(help2)
+            openImage(help3)
+            0
+        }
+
         NEXT_BUTTON_ID -> {
             applyKeymap()
             0
@@ -645,6 +652,7 @@ fun updateKeymapPageText() {
         SetWindowTextW(it.hwndText, strings[it.text].reduce(it.hwndText))
     }
     SetWindowTextW(nextButton, strings[apply])
+    SetWindowTextW(helpButton, strings[help])
 }
 
 fun updateInstallCODMPageText() {

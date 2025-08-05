@@ -146,6 +146,24 @@ val skipButton by lazy {
     )
 }
 
+const val HELP_BUTTON_ID = 1007
+val helpButton by lazy {
+    CreateWindowExW(
+        dwExStyle = 0u,
+        lpClassName = W_BUTTON,
+        lpWindowName = strings[help],
+        dwStyle = WS_CHILD.toUInt() or WS_VISIBLE.toUInt(),
+        X = margin,
+        Y = mainHeight - margin - buttonHeight,
+        nWidth = buttonWidth,
+        nHeight = buttonHeight,
+        hWndParent = hwndMain,
+        hMenu = HELP_BUTTON_ID.toLong().toCPointer(),
+        hInstance = instance,
+        lpParam = null
+    )
+}
+
 const val NEXT_BUTTON_ID = 1003
 val nextButton by lazy {
     CreateWindowExW(

@@ -87,12 +87,14 @@ const val br_h_key = "br_h_key"
 const val br_q_key = "br_q_key"
 const val br_r_key = "br_r_key"
 const val br_v_key = "br_v_key"
+const val br_n_key = "br_n_key"
 const val br_ctrl_key = "br_ctrl_key"
 const val br_caps_key = "br_caps_key"
 const val br_alt_key = "br_alt_key"
 const val br_3_key = "br_3_key"
 const val br_4_key = "br_4_key"
 const val info = "info"
+const val help = "help"
 const val lang_en = "lang_en"
 const val lang_hu = "lang_hu"
 
@@ -173,11 +175,12 @@ val en = mapOf(
     br_e_key to "Skill/Aircraft jammer",
     br_g_key to "Revive/Pick up items",
     br_f_key to "Cancel grenade/Enter-exit car/Doors/Pick up item",
-    br_t_key to "Open-Close loot box",
+    br_t_key to "Open-Close loot box/Jump snowboard",
     br_h_key to "Pick up item/Open-Close loot box",
     br_q_key to "Enter car",
     br_r_key to "Reload",
-    br_v_key to "1st/3rd person switch",
+    br_v_key to "Desperado",
+    br_n_key to "1st/3rd person switch",
     br_ctrl_key to "Prone",
     br_alt_key to "Free view",
     br_3_key to "Grenade",
@@ -263,17 +266,19 @@ val hu = mapOf(
     br_e_key to "Képesség/Rakéta hárítás",
     br_g_key to "Feléleszt/Elem felvétele",
     br_f_key to "Mégse gránát/Be-ki szállás autóból/Ajtók/Elem felvétele",
-    br_t_key to "Láda nyitás-zárás",
+    br_t_key to "Láda nyitás-zárás/Ugrás hó deszka",
     br_h_key to "Elem felvétele/Láda nyitás-zárás",
     br_q_key to "Be szállás autóba",
     br_r_key to "Újratöltés",
-    br_v_key to "Belső/Külső nézet váltás",
+    br_v_key to "Desperado",
+    br_n_key to "Belső/Külső nézet váltás",
     br_ctrl_key to "Fekvés",
     br_alt_key to "Szabad nézet",
     br_3_key to "Gránát",
     br_4_key to "Páncél",
     lock_mouse_key to "Kurzor rögzítése a képernyőhöz",
     info to "Sajnos a módosítások miatt a billentyű kiosztás emulátoron belül történő módosítása nem működik, de ezzel az alkalmazással bármikor módosítható.",
+    help to "Súgó",
     lang_en to "Angol - English",
     lang_hu to "Magyar - Magyar",
 )
