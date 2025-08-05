@@ -64,16 +64,16 @@ object DatabaseManager {
 
             if (text.contains("\"frame_rate\": ")) {
                 val frameRate = text.substringAfter("\"frame_rate\": ").substringBefore(',')
-                newText.replace("\"frame_rate\": $frameRate", "\"frame_rate\": 120")
+                newText = newText.replace("\"frame_rate\": $frameRate", "\"frame_rate\": 120")
             } else {
                 val clarity = text.substringAfter("\"clarity\": ").substringBefore(',')
-                newText.replace("\"clarity\": $clarity", "\"clarity\": $clarity, \"frame_rate\": 120")
+                newText = newText.replace("\"clarity\": $clarity", "\"clarity\": $clarity, \"frame_rate\": 120")
             }
             if (text.contains("\"hide_full_screen_topbar\": ")) {
                 val hide = text.substringAfter("\"hide_full_screen_topbar\": ").substringBefore(',')
-                newText.replace("\"hide_full_screen_topbar\": $hide", "\"hide_full_screen_topbar\": true")
+                newText = newText.replace("\"hide_full_screen_topbar\": $hide", "\"hide_full_screen_topbar\": true")
             } else {
-                newText.replace("\"frame_rate\": 120", "\"hide_full_screen_topbar\": true")
+                newText = newText.replace("\"frame_rate\": 120", "\"hide_full_screen_topbar\": true")
             }
 
             sqlite_exec(db, """

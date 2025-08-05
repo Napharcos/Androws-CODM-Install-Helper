@@ -27,8 +27,8 @@ const val KEYMAP_CONTENT_146_175 = """
 <SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="XBtn|ReturnSetUp" Point_X="0.756875" Point_Y="0.656667"/>
 <SwitchOperation Description="" EnableSwitch="" DisableSwitch="XBtn|ReturnSetUp" Point_X="0.756875" Point_Y="0.656667" HideTips="1"/>
 </KeyMapping>
-<KeyMapping ItemName="%vName" Point_X="0.640000" Point_Y="0.440000" Description="Desperado" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%vCode">
-<SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="ReturnSetUp|MapOpenFlag|XBtn" Point_X="0.625000" Point_Y="0.455000"/>
+<KeyMapping ItemName="%vName" Point_X="0.615000" Point_Y="0.465000" Description="Desperado" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%vCode">
+<SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="ReturnSetUp|MapOpenFlag|XBtn" Point_X="0.615000" Point_Y="0.465000"/>
 </KeyMapping>
 <KeyMapping ItemName="%escName" Point_X="0.765625" Point_Y="0.050000" Description="打开设置" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%escCode">
 <SwitchOperation Description="关闭购物机" EnableSwitch="ShoppingMachine" DisableSwitch="XBtn|MapOpenFlag" Point_X="0.563281" Point_Y="0.669444"/>
