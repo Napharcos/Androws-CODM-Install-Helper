@@ -8,6 +8,7 @@ const val KEYMAP_CONTENT_145_175 = """
 <SwitchOperation Description="瞄准" EnableSwitch="Sniper" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.874219" Point_Y="0.541667" HideTips="1"/>
 <SwitchOperation Description="取消瞄准" EnableSwitch="Sniper2" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.874219" Point_Y="0.541667" HideTips="1"/>
 <SwitchOperation Description="刀" EnableSwitch="Knife" DisableSwitch="ReturnSetUp" Point_X="0.060937" Point_Y="0.519444" HideTips="1"/>
+<SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="ReturnSetUp" Point_X="0.874219" Point_Y="0.541667" HideTips="1"/>
 </KeyMapping>
 <KeyMapping ItemName="%tabName" Point_X="0.049219" Point_Y="0.084722" Description="背包" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%tabCode">
 <SwitchOperation Description="取消释放弓箭/盾牌" EnableSwitch="Bow|Sniper2" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.060937" Point_Y="0.519444"/>
@@ -62,6 +63,7 @@ const val KEYMAP_CONTENT_145_175 = """
 <SwitchOperation Description="取消下蹲" EnableSwitch="CancelSquat" DisableSwitch="Boomf" Point_X="0.852539" Point_Y="0.918403" HideTips="1"/>
 <SwitchOperation Description="取消趴下" EnableSwitch="CancelFall" DisableSwitch="Boomf" Point_X="0.852539" Point_Y="0.918403" HideTips="1"/>
 <SwitchOperation Description="翻滚" EnableSwitch="Roll" DisableSwitch="Boomf" Point_X="0.852539" Point_Y="0.918403" HideTips="1"/>
+<SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="ReturnSetUp" Point_X="0.852539" Point_Y="0.918403" HideTips="1"/>
 </KeyMapping>
 <KeyMapping ItemName="%eName" Point_X="0.458594" Point_Y="0.694444" Description="拆弹" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%eCode">
 <SwitchOperation Description="直升机炮手" EnableSwitch="gunner" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.738750" Point_Y="0.552222"/>

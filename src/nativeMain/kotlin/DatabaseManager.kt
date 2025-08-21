@@ -62,18 +62,19 @@ object DatabaseManager {
             val text = value.toKString()
             var newText = text
 
-            if (text.contains("\"frame_rate\": ")) {
-                val frameRate = text.substringAfter("\"frame_rate\": ").substringBefore(',')
-                newText = newText.replace("\"frame_rate\": $frameRate", "\"frame_rate\": 120")
+            if (text.contains("\"frame_rate\":")) {
+                val frameRate = text.substringAfter("\"frame_rate\":").substringBefore(',')
+                newText = newText.replace("\"frame_rate\":$frameRate", "\"frame_rate\":120")
             } else {
-                val clarity = text.substringAfter("\"clarity\": ").substringBefore(',')
-                newText = newText.replace("\"clarity\": $clarity", "\"clarity\": $clarity, \"frame_rate\": 120")
+                val clarity = text.substringAfter("\"clarity\":").substringBefore(',')
+                newText = newText.replace("\"clarity\":$clarity", "\"clarity\":$clarity,\"frame_rate\":120")
             }
-            if (text.contains("\"hide_full_screen_topbar\": ")) {
-                val hide = text.substringAfter("\"hide_full_screen_topbar\": ").substringBefore(',')
-                newText = newText.replace("\"hide_full_screen_topbar\": $hide", "\"hide_full_screen_topbar\": true")
+
+            if (text.contains("\"hide_full_screen_topbar\":")) {
+                val hide = text.substringAfter("\"hide_full_screen_topbar\":").substringBefore(',')
+                newText = newText.replace("\"hide_full_screen_topbar\":$hide", "\"hide_full_screen_topbar\":true")
             } else {
-                newText = newText.replace("\"frame_rate\": 120", "\"hide_full_screen_topbar\": true")
+                newText = newText.replace("\"frame_rate\":120", "\"frame_rate\":120,\"hide_full_screen_topbar\":true")
             }
 
             sqlite_exec(db, """
