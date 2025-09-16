@@ -55,9 +55,8 @@ object DatabaseManager {
         if (db == null) db = sqlite_open(dbPath)
 
         db?.let {
-            val value = sqlite3_get_config_value(db, "androws.com.activision.callofduty.shooter.local_user_config")
-
-            if (value == null) return
+            val value =
+                sqlite3_get_config_value(db, "androws.com.activision.callofduty.shooter.local_user_config") ?: return
 
             val text = value.toKString()
             var newText = text
@@ -123,5 +122,6 @@ object DatabaseManager {
 
     fun closeDb() {
         db?.let { sqlite_close(it) }
+        db = null
     }
 }

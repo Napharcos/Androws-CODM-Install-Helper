@@ -623,12 +623,12 @@ fun installCODMPageCommand(id: Int): Int {
         }
         NEXT_BUTTON_ID -> {
             start(Steps.CODM_KEYMAP)
-            MessageBoxW(
-                hWnd = hwndMain,
-                lpText = strings[info],
-                lpCaption = "Info",
-                uType = MB_OK.toUInt()
-            )
+//            MessageBoxW(
+//                hWnd = hwndMain,
+//                lpText = strings[info],
+//                lpCaption = "Info",
+//                uType = MB_OK.toUInt()
+//            )
             0
         }
         OPEN_BUTTON_ID -> {

@@ -6,7 +6,7 @@ import platform.windows.*
 import kotlin.uuid.ExperimentalUuidApi
 import kotlin.uuid.Uuid
 
-const val codVersion = "1.0.52"
+var codVersion = ""
 
 object ConsoleManager {
 
@@ -175,23 +175,38 @@ object ConsoleManager {
         val downloadsPath = getSpecificPath(FOLDERID_Downloads) ?: return null
         val dir = opendir(downloadsPath) ?: return null
 
+        val candidates = mutableListOf<Pair<String, List<Int>>>()
+
         try {
             while (true) {
                 val entry = readdir(dir) ?: break
                 val fileName = entry.pointed.d_name.toKString()
 
                 if (
-                    fileName.endsWith(".apkm") &&
                     "callofduty" in fileName.lowercase() &&
-                    codVersion in fileName
+                    (fileName.endsWith(".apkm") || fileName.endsWith(".zip"))
                 ) {
-                    return "$downloadsPath\\$fileName"
+                    val regex = Regex("""\d+(\.\d+)+""")
+                    val versionStr = regex.find(fileName)?.value ?: continue
+                    val versionParts = versionStr.split(".").map { it.toIntOrNull() ?: 0 }
+                    candidates += downloadsPath + "\\" + fileName to versionParts
+
                 }
             }
         } finally {
             closedir(dir)
         }
-        return null
+
+        val latest = candidates.maxWithOrNull { a, b ->
+            val size = maxOf(a.second.size, b.second.size)
+            for (i in 0 until size) {
+                val av = a.second.getOrNull(i) ?: 0
+                val bv = b.second.getOrNull(i) ?: 0
+                if (av != bv) return@maxWithOrNull av.compareTo(bv)
+            }
+            0
+        } ?: return null
+        return latest.first.also { codVersion = latest.second.joinToString(".") }
     }
 
     @OptIn(ExperimentalForeignApi::class)

@@ -87,7 +87,7 @@ val gundamKeys = mutableListOf(
     KeyData(lockMouseKey, lock_mouse_key, loadGdKey(lockMouseKey) ?: "X", loadGdKeyCode(lockMouseKey) ?: 88, 3012),
 )
 
-val keyMaps = mutableMapOf<Int, KeyMaps>(
+val keyMaps = mutableMapOf(
     4001 to KeyMaps("Multi Player", MP, mpKeys),
     4002 to KeyMaps("Battle Royale", BR, brKeys),
     4003 to KeyMaps("Gundam", GD, gundamKeys)
@@ -111,6 +111,7 @@ fun applyKeymap() {
     reinitGD(keyMaps[4003]?.keys ?: emptyList())
     ConsoleManager.stopEmulator()
     DatabaseManager.launchUpdateDb()
+    ConsoleManager.startCODM()
 }
 
 fun updateKeyCode(id: String, keyCode: Int) {
