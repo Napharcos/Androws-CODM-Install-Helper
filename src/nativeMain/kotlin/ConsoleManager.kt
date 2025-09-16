@@ -45,9 +45,12 @@ object ConsoleManager {
     }
 
     fun startCODM() {
-        val path = "\"C:\\Program Files\\Tencent\\Androws\\Application\\AndrowsLauncher.exe\" --from \"2\" --launch-pkg-name \"com.activision.callofduty.shooter\" --launch-proc-name \"Androws.exe\""
-        runPath(path)
+        val exe = "C:\\Program Files\\Tencent\\Androws\\Application\\AndrowsLauncher.exe"
+        val args = "--from \"2\" --launch-pkg-name \"com.activision.callofduty.shooter\" --launch-proc-name \"Androws.exe\""
+        val command = "cmd /c start \"\" \"$exe\" $args"
+        system(command)
     }
+
 
     fun startStore() {
         val androwsPath = "c:\\Program Files\\Tencent\\Androws\\Application"
