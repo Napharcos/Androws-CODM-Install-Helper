@@ -1,7 +1,6 @@
 const val KEYMAP_CONTENT_146_175 = """
 <KeyMapSolution SolutionID="{&quot;id&quot;:&quot;1752061764139&quot;,&quot;type&quot;:0}" SolutionName="使命战场模式" InputType="1" SilentUpdate="0">
 <KeyMapping ItemName="Right Click" Point_X="0.883333" Point_Y="0.558333" Description="右键开镜" Remark="" MiniVisiable="true" MiniDisable="false" ShowOnLockAsciiCode="192" AsciiCode="-2">
-<SwitchOperation Description="下飞" EnableSwitch="FlyDown" DisableSwitch="XBtn|MapOpenFlag|BreastPatting|ReturnSetUp|SkillX" Point_X="0.879107" Point_Y="0.723264"/>
 <SwitchOperation Description="瞄准" EnableSwitch="Sniper" DisableSwitch="XBtn|MapOpenFlag|BreastPatting|ReturnSetUp|SkillX|newmap3" Point_X="0.850729" Point_Y="0.596667" HideTips="1"/>
 <SwitchOperation Description="取消瞄准" EnableSwitch="Sniper2|Reload" DisableSwitch="XBtn|MapOpenFlag|BreastPatting|ReturnSetUp|SkillX|newmap3" Point_X="0.850729" Point_Y="0.596667" HideTips="1"/>
 <SwitchOperation Description="打开地图时取消标记" EnableSwitch="MapOpenFlag" Point_X="0.663281" Point_Y="0.919444"/>
@@ -124,7 +123,7 @@ const val KEYMAP_CONTENT_146_175 = """
 <SwitchOperation Description="缆绳中" EnableSwitch="CancelCable" DisableSwitch="MapOpenFlag|ReturnSetUp" Point_X="0.620313" Point_Y="0.502778" TexturePosition="CancelCable"/>
 <SwitchOperation Description="升级技能" EnableSwitch="SkillUpgrade" DisableSwitch="MapOpenFlag|ReturnSetUp" Point_X="0.547656" Point_Y="0.716667" TexturePosition="SkillUpgrade"/>
 <SwitchOperation Description="切换技能（出生地）" EnableSwitch="SkillCircle" DisableSwitch="MapOpenFlag|ReturnSetUp" Point_X="0.514844" Point_Y="0.679167" TexturePosition="SkillCircle"/>
-<SwitchOperation Description="开启功能" EnableSwitch="OpenFunction" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp" Point_X="0.503906" Point_Y="0.659722" TexturePosition="OpenFunction"/>
+<SwitchOperation Description="开启功能" EnableSwitch="OpenFunction" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp" Point_X="0.503906" Point_Y="0.659722"/>
 <SwitchOperation Description="异变围城扳手" EnableSwitch="Spanner" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp" Point_X="0.763125" Point_Y="0.501111"/>
 <SwitchOperation Description="防空炮进" EnableSwitch="AAgun" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp|GetOutCar|AAgun2" Point_X="0.622255" Point_Y="0.500000"/>
 <SwitchOperation Description="义肢使用" EnableSwitch="choose1" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp|GetOutCar" Point_X="0.757687" Point_Y="0.700521"/>
@@ -186,6 +185,7 @@ const val KEYMAP_CONTENT_146_175 = """
 <SwitchOperation Description="第1/3人称切换" EnableSwitch="SetUp" DisableSwitch="SkillX|ReturnSetUp|CDX" Point_X="0.120313" Point_Y="0.902778"/>
 </KeyMapping>
 <KeyMapping ItemName="%ctrlName" Point_X="0.951562" Point_Y="0.825000" Description="趴下" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%ctrlCode">
+<SwitchOperation Description="下飞" EnableSwitch="FlyDown" DisableSwitch="XBtn|MapOpenFlag|BreastPatting|ReturnSetUp|SkillX" Point_X="0.879107" Point_Y="0.723264"/>
 <SwitchOperation Description="趴下" EnableSwitch="Fall" DisableSwitch="InSetUp" Point_X="0.967057" Point_Y="0.940104"/>
 <SwitchOperation Description="取消趴下" EnableSwitch="CancelFall" DisableSwitch="InSetUp" Point_X="0.947761" Point_Y="0.847513"/>
 </KeyMapping>

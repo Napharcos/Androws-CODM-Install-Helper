@@ -2,7 +2,6 @@ const val KEYMAP_CONTENT_145_175 = """
 <KeyMapSolution SolutionID="{&quot;id&quot;:&quot;1752061764155&quot;,&quot;type&quot;:0}" SolutionName="团队竞技模式" InputType="1" SilentUpdate="0">
 <KeyMapping ItemName="Right Click" Point_X="0.874219" Point_Y="0.541667" Description="右键开镜" Remark="" MiniVisiable="false" MiniDisable="false" ShowOnLockAsciiCode="192" AsciiCode="-2">
 <SwitchOperation Description="导弹齐射" EnableSwitch="MissileVolley" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp" Point_X="0.944531" Point_Y="0.506944"/>
-<SwitchOperation Description="下飞" EnableSwitch="FlyDown" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp|" Point_X="0.060937" Point_Y="0.519444" HideTips="1"/>
 <SwitchOperation Description="下车" EnableSwitch="GetOutCar" DisableSwitch="XBtn|MapOpenFlag|InSetUp" Point_X="0.046875" Point_Y="0.637500"/>
 <SwitchOperation Description="影刃" EnableSwitch="ShadowBlade" DisableSwitch="ReturnSetUp" Point_X="0.874219" Point_Y="0.541667" HideTips="1"/>
 <SwitchOperation Description="瞄准" EnableSwitch="Sniper" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.874219" Point_Y="0.541667" HideTips="1"/>
@@ -56,6 +55,7 @@ const val KEYMAP_CONTENT_145_175 = """
 <SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="ReturnSetUp|SwitchMode4|Boomf" Point_X="0.349609" Point_Y="0.830000"/>
 </KeyMapping>
 <KeyMapping ItemName="%tName" Point_X="0.672500" Point_Y="0.681111" Description="引爆" Remark="" MiniVisiable="true" MiniDisable="false" AsciiCode="%tCode">
+<SwitchOperation Description="上飞" EnableSwitch="FlyUp" DisableSwitch="XBtn|MapOpenFlag|InSetUp|BreastPatting|ReturnSetUp|SkillX" Point_X="0.942187" Point_Y="0.580000"/>
 <SwitchOperation Description="" EnableSwitch="SetUp" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp" Point_X="0.672500" Point_Y="0.681111"/>
 </KeyMapping>
 <KeyMapping ItemName="%cName" Point_X="0.852539" Point_Y="0.918403" Description="下蹲" Remark="" MiniVisiable="false" MiniDisable="false" AsciiCode="%cCode">
@@ -137,8 +137,8 @@ const val KEYMAP_CONTENT_145_175 = """
 <SwitchOperation Description="Move" EnableSwitch="SetUp"/>
 </KeyMappingEx>
 <KeyMappingEx ItemName="Left Mouse Button" Point_X="0.060937" Point_Y="0.519444" Description="开火" Remark="" MiniVisiable="false" MiniDisable="false" AutoActive="1" Type="LClick" LOCK_AsciiCode="%lockMouseCode">
+<SwitchOperation Description="下飞" EnableSwitch="FlyDown" DisableSwitch="XBtn|MapOpenFlag|ReturnSetUp|" Point_X="0.060937" Point_Y="0.519444" HideTips="1"/>
 <SwitchOperation Description="锁定（躲猫猫）" EnableSwitch="Flash2" DisableSwitch="ReturnSetUp|Boomf" Point_X="0.848437" Point_Y="0.709722"/>
-<SwitchOperation Description="上飞" EnableSwitch="FlyUp" DisableSwitch="XBtn|MapOpenFlag|InSetUp|BreastPatting|ReturnSetUp|SkillX" Point_X="0.942187" Point_Y="0.580000"/>
 <SwitchOperation Description="弓箭" EnableSwitch="Bow" DisableSwitch="BreastPatting|ReturnSetUp|SelectFireMode" Point_X="0.854688" Point_Y="0.745833"/>
 <SwitchOperation Description="下车" EnableSwitch="GetOutCar" DisableSwitch="XBtn|MapOpenFlag|InSetUp" Point_X="0.942187" Point_Y="0.580000"/>
 <SwitchOperation Description="射击" EnableSwitch="SetUp" DisableSwitch="BreastPatting|ReturnSetUp|Boomf" Point_X="0.060937" Point_Y="0.519444" HideTips="1"/>
